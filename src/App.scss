@@ -1,0 +1,33 @@
+:root {
+  --font-size-small: 1.3rem;
+  --font-size-regular: 1.6rem;
+  --font-size-large: 1.8rem;
+  --font-size-xlarge: 4rem;
+  --default-padding: 1.6rem;
+  --rounded-corner: 0.8rem;
+  --dark-c1: hsl(255, 48%, 30%);
+  --dark-c2: hsl(255, 52%, 50%);
+  --text-color: #3f3f3f;
+  --main-bg-c1: #5ee7df;
+  --main-bg-c2: #66a6ff;
+  --nav-bg-c: #eee;
+  --card-bg-c1: #fff;
+  --card-bg-c2: #fff;
+}
+
+.App {
+  font-family: Roboto;
+  font-size: var(--font-size-regular, 16px);
+  background-image: linear-gradient(
+    to top,
+    var(--main-bg-c1, #5ee7df) 0,
+    var(--main-bg-c2, #66a6ff) 100%
+  );
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  color: var(--text-color, #3f3f3f);
+  transition: background-color 200ms;
+}

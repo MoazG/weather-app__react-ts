@@ -1,0 +1,37 @@
+.hamburger-button {
+  position: relative;
+  z-index: 4;
+  background: transparent;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 0;
+  align-items: center;
+  &:focus {
+    outline: none;
+  }
+
+  & > div {
+    width: 2.5rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--text-color, #000);
+    transition: all 0.3s linear;
+    transform-origin: 1px;
+  }
+  &.rotate {
+    div:first-child {
+      transform: rotate(45deg);
+    }
+    div:nth-child(2) {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    div:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+}

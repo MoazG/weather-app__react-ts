@@ -1,0 +1,57 @@
+.theme-toggle-container {
+  .toggle-button {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    &__input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: none;
+      padding: 0;
+      clip: rect(0 0 0 0);
+    }
+    &__track {
+      border: 1px solid #0f1114;
+      background-color: #0f1114;
+      border-radius: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50px;
+      height: 24px;
+      padding-right: 3px;
+      padding-left: 3px;
+      div {
+        width: 17px;
+        height: 17px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__thumb {
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #fff;
+      transition: transform 200ms;
+    }
+    &.focus {
+      .toggle-button__thumb {
+        box-shadow: 0 0 2px 2px #ffa7c4;
+      }
+    }
+    &.dark {
+      .toggle-button__thumb {
+        transform: translateX(24px);
+      }
+    }
+  }
+}

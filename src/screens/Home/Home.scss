@@ -1,0 +1,63 @@
+.main-card-container {
+  margin-top: 2rem;
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-flow: column;
+  & .scroll-container {
+    min-height: 60vh;
+  }
+  & .scroll-wrapper {
+    height: 60vh;
+    flex: 0 1 auto;
+    position: relative;
+  }
+
+  & .add-city-card {
+    margin-top: 1rem;
+  }
+  .left-btn,
+  .right-btn {
+    display: none;
+  }
+  @media (orientation: landscape) {
+    & .scroll-container,
+    .scroll-wrapper {
+      min-height: 80vh;
+    }
+  }
+  @media (orientation: landscape) and (max-height: 520px) {
+    & .scroll-container,
+    .scroll-wrapper {
+      min-height: 80vmax;
+    }
+  }
+  @media (min-width: 1024px) and (min-height: 1200px) {
+    justify-content: space-evenly;
+  }
+  @media (min-width: 1024px) {
+    .scroll-container {
+      position: relative;
+      .left-btn,
+      .right-btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        svg {
+          width: 70px;
+          height: 70px;
+          fill: var(--nav-bg-c);
+        }
+      }
+      .left-btn {
+        left: -7rem;
+      }
+      .right-btn {
+        right: -7rem;
+      }
+    }
+  }
+}

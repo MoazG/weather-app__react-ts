@@ -1,0 +1,153 @@
+.city-card {
+  background: linear-gradient(to bottom, var(--card-bg-c1), var(--card-bg-c2));
+  box-shadow: 0px 0px 4px hsla(0, 0, 0, 0.5);
+  border-radius: 20px;
+  height: 60vh;
+  width: 100%;
+  @media (orientation: landscape) {
+    height: 80vh;
+  }
+  @media (orientation: landscape) and (max-height: 520px) {
+    min-height: 80vmax;
+  }
+
+  overflow: hidden;
+  .weather-condition {
+    height: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-flow: column;
+    // flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    &__city-name {
+      // outline: 1px solid yellow;
+      padding: 1rem;
+      line-height: 3rem;
+    }
+    &__icon {
+      // outline: 1px solid white;
+      padding: 1rem;
+      width: 40%;
+      // height: 100px;
+      img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: attr(width) / attr(height);
+      }
+    }
+    &__text {
+      // outline: 1px solid green;
+      margin: 1rem 0;
+      width: 100%;
+      text-align: center;
+      &__temp {
+        font-size: var(--font-size-xlarge);
+        display: block;
+      }
+      &__cond {
+        display: block;
+        font-size: var(--font-size-large);
+      }
+    }
+    &__min-max {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      & > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: column;
+        width: 20%;
+        & > svg {
+          height: 2rem;
+          margin: auto;
+        }
+      }
+    }
+  }
+  .loading {
+    opacity: 0.3;
+    display: block;
+    width: 100%;
+    min-height: 48vh;
+    @media (orientation: landscape) {
+      min-height: 66vh;
+    }
+    // height: 450px;
+    max-height: 50vh;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+        80deg,
+        rgba(lightgrey, 0) 0,
+        rgba(lightgrey, 0.4) 70%,
+        rgba(lightgrey, 0) 100%
+      ),
+      linear-gradient(white 40px, transparent 0),
+      radial-gradient(circle 50px, white 100%, transparent 0),
+      linear-gradient(#fff 40px, transparent 0),
+      linear-gradient(#fff 40px, transparent 0),
+      linear-gradient(#fff 60px, transparent 0),
+      linear-gradient(#fff 60px, transparent 0),
+      linear-gradient(gray 100%, transparent 0);
+    background-size: 200px 100%, 60% 30px, 100px 100px, 20% 30px, 40% 30px,
+      20% 60px, 20% 60px, 100% 100%;
+    background-position: -150% 0, 50% 8%, 50% 30%, 50% 55%, 50% 72%, 20% 95%,
+      80% 95%, 0 0;
+
+    animation: loading2 1.5s infinite;
+  }
+  @keyframes loading2 {
+    to {
+      background-position: 350% 0, 50% 8%, 50% 30%, 50% 55%, 50% 72%, 20% 95%,
+        80% 95%, 0 0;
+    }
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  opacity: 0.2;
+  display: block;
+  width: 100%;
+  min-height: 60vh;
+  border-radius: 20px;
+  @media (orientation: landscape) {
+    min-height: 80vh;
+  }
+  @media (orientation: landscape) and (max-height: 520px) {
+    min-height: 80vmax;
+  }
+  // height: 450px;
+  // max-height: 50vh;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      80deg,
+      rgba(lightgrey, 0) 0,
+      rgba(lightgrey, 0.4) 70%,
+      rgba(lightgrey, 0) 100%
+    ),
+    linear-gradient(white 40px, transparent 0),
+    radial-gradient(circle 50px, white 100%, transparent 0),
+    linear-gradient(#fff 40px, transparent 0),
+    linear-gradient(#fff 40px, transparent 0),
+    linear-gradient(#fff 60px, transparent 0),
+    linear-gradient(#fff 60px, transparent 0),
+    linear-gradient(gray 100%, transparent 0);
+  background-size: 200px 100%, 60% 30px, 100px 100px, 20% 30px, 40% 30px,
+    20% 60px, 20% 60px, 100% 100%;
+  background-position: -150% 0, 50% 6%, 50% 30%, 50% 65%, 50% 76%, 20% 95%,
+    80% 95%, 0 0;
+
+  animation: loading2 1.5s infinite;
+}
+@keyframes loading2 {
+  to {
+    background-position: 350% 0, 50% 6%, 50% 30%, 50% 65%, 50% 76%, 20% 95%,
+      80% 95%, 0 0;
+  }
+}

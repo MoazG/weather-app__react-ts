@@ -1,0 +1,107 @@
+.edit-cities-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 0.7rem;
+  min-height: calc(100vh - 65px);
+  background: linear-gradient(to bottom, #86dbff 0, #e0c3fc 100%);
+  &.dark {
+    background: linear-gradient(#fc7db8, #495cfc);
+  }
+  .back-btn-container {
+    margin: 1rem auto;
+    width: 20%;
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: attr(width) / attr(height);
+    }
+  }
+  .edit-cities__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--nav-bg-c);
+    box-shadow: 0 2px 2px #1a1631;
+    margin-bottom: 4px;
+  }
+  .edit-cities-container {
+    min-height: 50vh;
+    box-shadow: -1px 1px 1px rgba(26, 22, 49, 0.5),
+      1px 1px 1px rgba(26, 22, 49, 0.5);
+    border-radius: var(--rounded-corner);
+    overflow: hidden;
+    background-image: linear-gradient(
+      to top,
+      var(--main-bg-c2, #5ee7df) 0,
+      var(--main-bg-c2, #66a6ff) 20%
+    );
+  }
+  .edit-cities__ul {
+    padding: 0.7rem 2px;
+    li {
+      margin-bottom: 1px;
+      background-color: var(--nav-bg-c);
+      border: none;
+      border-radius: 5px;
+      box-shadow: -1px 1px 1px rgba(26, 22, 49, 0.5),
+        1px 1px 1px rgba(26, 22, 49, 0.5);
+      margin-bottom: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .remove-btn,
+      .drag-btn {
+        height: 40px;
+        width: 50px;
+        box-shadow: 1px 0 1.4px rgba(26, 22, 49, 0.8);
+      }
+      .remove-btn {
+        svg {
+          fill: red;
+        }
+      }
+      .drag-btn {
+        cursor: grab;
+        box-shadow: -1px 0 1.4px rgba(26, 22, 49, 0.8);
+        svg {
+          fill: #495cfc;
+        }
+      }
+    }
+  }
+  @media (min-width: 700px) {
+    .wrap {
+      display: flex;
+      padding: 10rem 2rem 0;
+      .back-btn-container {
+        flex: 0 1 10%;
+        text-align: center;
+        margin-top: 200px;
+        img {
+          width: 60%;
+        }
+      }
+      .edit-cities-container {
+        min-height: 50vh;
+        flex: 0 1 90%;
+        background-image: linear-gradient(
+          to top,
+          var(--main-bg-c2, #5ee7df) 0,
+          var(--main-bg-c2, #66a6ff) 20%
+        );
+        box-shadow: -1px 1px 1px rgba(26, 22, 49, 0.5);
+        border-radius: var(--rounded-corner);
+        overflow: hidden;
+        .edit-cities__ul {
+          padding: 0.7rem 2px;
+          li {
+            border: none;
+            border-radius: 5px;
+            box-shadow: -1px 1px 1px rgba(26, 22, 49, 0.5);
+            margin-bottom: 0.7rem;
+          }
+        }
+      }
+    }
+  }
+}
