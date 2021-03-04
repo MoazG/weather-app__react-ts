@@ -15,7 +15,7 @@ type Props = {
 const CityCard = ({ city, showErrorModal }: Props) => {
   const [cityDetails, setCityDetails] = useState<CityDetailsType>(null!);
 
-  const endPoint = `http://api.openweathermap.org/data/2.5/weather?lat=${city.position.lat}&lon=${city.position.lng}&units=metric&appid=${process.env.REACT_APP_OW_API_KEY}`;
+  const endPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${city.position.lat}&lon=${city.position.lng}&units=metric&appid=${process.env.REACT_APP_OW_API_KEY}`;
   const { data, error } = useDataFetch<CurrentWeather>(endPoint);
 
   useEffect(() => {
